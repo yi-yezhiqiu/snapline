@@ -3,7 +3,7 @@
 截图不再堆在桌面上 —— 挂到屏幕顶端的晾衣绳上。
 *Stop screenshots piling up on your desktop.*
 
-![控制窗口](https://raw.githubusercontent.com/yi-yezhiqiu/snapline/main/docs-control-window.png)
+![截图挂在屏幕顶端的晾衣绳上](https://raw.githubusercontent.com/yi-yezhiqiu/snapline/main/docs-line.png)
 
 ### 下载 / Download
 
@@ -80,4 +80,5 @@ Build from source with `build.ps1` — only the in-box `csc.exe` is needed.
 Inspired by [Tendedero](https://github.com/alejandrobujan/tendedero) for macOS (MIT).
 This is a from-scratch C# / WPF reimplementation sharing no source code; the original's
 name and icon are not covered by its license, so this port ships its own.
+
 

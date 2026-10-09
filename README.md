@@ -13,7 +13,9 @@ A single 103 KB file with zero dependencies. Just double-click it.
 
 [中文](#中文) · [English](#english)
 
-![控制窗口](docs-control-window.png)
+![截图挂在屏幕顶端的晾衣绳上](docs-line.png)
+
+*截图不再落到桌面，而是挂在屏幕顶端的绳子上。鼠标移上去绳子滑出来，点一下就把图复制回剪贴板。*
 
 ---
 
@@ -47,6 +49,8 @@ A single 103 KB file with zero dependencies. Just double-click it.
 ### 运行与退出
 
 双击 `晾晒工具.exe` 会弹出控制窗口：
+
+![控制窗口](docs-control-window.png)
 
 | 按钮 | 作用 |
 |---|---|
@@ -129,8 +133,10 @@ powershell -ExecutionPolicy Bypass -File build.ps1
 
 ```
 ├── build.ps1              ← 一键编译脚本
+├── publish.py             ← 发 Release（Python，绕开 .NET 的 TLS 限制）
 ├── src/                   ← 全部源码（19 个 .cs，中文注释）
 ├── tools/smoke-test/      ← 自动化验证探针（抓屏 / 点击 / 关窗 / 顶端呼出 / DIB 解码）
+├── docs-line.png          ← 绳子挂在屏幕顶端的实际效果
 ├── docs-control-window.png
 ├── 使用说明.md             ← 更详细的中文说明
 └── LICENSE
