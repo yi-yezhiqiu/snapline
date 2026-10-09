@@ -1,4 +1,4 @@
-# ---- 编译产物（源码可自行编译，不入库）----
+﻿# ---- 编译产物（源码可自行编译，不入库）----
 dist/*.exe
 tools/smoke-test/*.exe
 *.lnk
@@ -20,3 +20,4 @@ obj/
 Thumbs.db
 desktop.ini
 .DS_Store
+
