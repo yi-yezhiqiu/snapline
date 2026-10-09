@@ -4,15 +4,22 @@
 #  用法（在你自己电脑上，普通 PowerShell 即可，不需要管理员）：
 #      powershell -ExecutionPolicy Bypass -File PUBLISH.ps1
 #
-#  它会问你要一个 GitHub token，然后自动：
+#  它会问你要一个 GitHub token（输入时不回显），然后自动：
 #    1. 推送 v1.0.0 标签
 #    2. 创建 Release（用 RELEASE_NOTES.md 作为说明）
 #    3. 上传 晾晒工具.exe 作为附件
+#
+#  也可以直接传参（适合脚本化调用；token 会进命令历史，不推荐）：
+#      powershell -ExecutionPolicy Bypass -File PUBLISH.ps1 -Token ghp_xxx
 #
 #  token 需要 "repo" 权限（classic token 勾 repo 即可）。
 #  token 只在内存里用一次，不写入任何文件。
 #  用完请去 GitHub 把它删掉：Settings → Developer settings → Personal access tokens
 # ============================================================
+
+param(
+    [string]$Token
+)
 
 $ErrorActionPreference = 'Stop'
 
@@ -35,12 +42,14 @@ Write-Host ("附件: {0}  ({1:N0} 字节)" -f $exeInfo.Name, $exeInfo.Length) -F
 if (-not (Test-Path $Notes)) { throw "找不到 $Notes" }
 
 # ---------- 取 token ----------
-$sec = Read-Host "粘贴 GitHub token（输入时不会回显）" -AsSecureString
-$bstr = [Runtime.InteropServices.Marshal]::SecureStringToBSTR($sec)
-try {
-    $Token = [Runtime.InteropServices.Marshal]::PtrToStringAuto($bstr)
-} finally {
-    [Runtime.InteropServices.Marshal]::ZeroFreeBSTR($bstr)
+if ([string]::IsNullOrWhiteSpace($Token)) {
+    $sec = Read-Host "粘贴 GitHub token（输入时不会回显）" -AsSecureString
+    $bstr = [Runtime.InteropServices.Marshal]::SecureStringToBSTR($sec)
+    try {
+        $Token = [Runtime.InteropServices.Marshal]::PtrToStringAuto($bstr)
+    } finally {
+        [Runtime.InteropServices.Marshal]::ZeroFreeBSTR($bstr)
+    }
 }
 if ([string]::IsNullOrWhiteSpace($Token)) { throw "没有输入 token" }
 
@@ -125,4 +134,5 @@ Write-Host ""
 $Token = $null
 $Headers = $null
 [GC]::Collect()
+
 
