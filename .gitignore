@@ -1,0 +1,22 @@
+# ---- 编译产物（源码可自行编译，不入库）----
+dist/*.exe
+tools/smoke-test/*.exe
+*.lnk
+
+# ---- 调试 / 临时产物 ----
+.probe/
+.ref/
+.hotkey-probe/
+*.log
+
+# ---- 编译中间件 ----
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+# ---- 系统文件 ----
+Thumbs.db
+desktop.ini
+.DS_Store
