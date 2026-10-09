@@ -1,4 +1,4 @@
-## Snapline · 晾晒工具 v1.0.0
+﻿## Snapline · 晾晒工具 v1.0.0
 
 截图不再堆在桌面上 —— 挂到屏幕顶端的晾衣绳上。
 *Stop screenshots piling up on your desktop.*
@@ -7,7 +7,7 @@
 
 ### 下载 / Download
 
-下载下面的 **`晾晒工具.exe`**，双击即用。
+下载下面的 **`Snapline.exe`**，双击即用。（中文名是「晾晒工具」，GitHub 附件名只支持 ASCII，所以文件名叫 Snapline.exe）
 
 - 单文件 **103 KB**，**零依赖** —— 不需要装 .NET、Python 或任何运行环境
 - 编译目标 .NET Framework 4.8，Windows 10 / 11 自带
@@ -61,13 +61,13 @@
 powershell -ExecutionPolicy Bypass -File build.ps1
 ```
 
-产物在 `dist\晾晒工具.exe`。
+产物在 `dist\晾晒工具.exe`（发布时重命名为 `Snapline.exe`）。
 
 ---
 
 ### English
 
-Download **`晾晒工具.exe`** below and double-click it. A single 103 KB file with
+Download **`Snapline.exe`** below and double-click it. A single 103 KB file with
 **zero dependencies** — no .NET install, no Python, no runtime. Compiled against the
 .NET Framework 4.8 that ships with Windows 10 / 11.
 
@@ -80,3 +80,4 @@ Build from source with `build.ps1` — only the in-box `csc.exe` is needed.
 Inspired by [Tendedero](https://github.com/alejandrobujan/tendedero) for macOS (MIT).
 This is a from-scratch C# / WPF reimplementation sharing no source code; the original's
 name and icon are not covered by its license, so this port ships its own.
+

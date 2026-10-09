@@ -3,6 +3,14 @@
 > Stop screenshots piling up on your desktop.
 > 截图不再堆在桌面上 —— 挂到屏幕顶端的晾衣绳上。
 
+[![Release](https://img.shields.io/github/v/release/yi-yezhiqiu/snapline?label=download&color=2f6f4f)](https://github.com/yi-yezhiqiu/snapline/releases/latest)
+[![License](https://img.shields.io/github/license/yi-yezhiqiu/snapline)](LICENSE)
+
+### [⬇ 下载 Snapline.exe](https://github.com/yi-yezhiqiu/snapline/releases/latest)
+
+单文件 **103 KB**，**零依赖** —— 不需要装 .NET、Python 或任何运行环境，双击即用。
+A single 103 KB file with zero dependencies. Just double-click it.
+
 [中文](#中文) · [English](#english)
 
 ![控制窗口](docs-control-window.png)
